@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
 from django.db import models
 from django.contrib.auth.models import User # Import models to connect
 
@@ -17,6 +15,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+
 
 class Comment(models.Model):
     post = models.ForeignKey(
